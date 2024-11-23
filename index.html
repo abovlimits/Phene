@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="logo.ico" alt="Laptop Store">
+        <button>Home</button>
+        <button>Contact Us</button>
+        <button>About Us</button>
+    </header>
+
+    <main>
+        <h1 class="page-title">OUR PRODUCTS</h1>
+
+        <div class="product-grid" id="product-grid">
+            <!-- Product cards will be inserted here dynamically -->
+        </div>
+    </main>
+
+    <!-- Modal for Specs -->
+<!-- Modal for Product Specifications -->
+<div id="specs-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Product Specifications</h2>
+        <div id="product-specs"></div> <!-- Product specs will be dynamically inserted here -->
+    </div>
+</div>
+
+<!-- Product Grid (This will display product cards) -->
+<div id="product-grid" class="product-grid">
+    <!-- Product cards will be inserted here dynamically -->
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

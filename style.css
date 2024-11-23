@@ -1,0 +1,191 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e5259; /* Background color for body */
+}
+
+/* Header styling */
+header {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center the items horizontally */
+    padding: 10px 20px;
+    background-color: #ffffff; /* Header background color */
+    color: black;
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    left: 20px;
+    max-height: 50px;
+    object-fit: contain;
+}
+
+/* Button styling */
+button {
+    background-color: #ffffff;
+    color: #0e5259;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #a9a9a9;
+    transform: scale(1.1);
+}
+
+/* Main section and grid styling */
+main {
+    padding: 20px;
+}
+
+/* Styling for the "PRODUCTS" title */
+.page-title {
+    text-align: center; /* Center the title */
+    font-size: 3.5em; /* Increase the font size */
+    font-weight: bold; /* Make it bold */
+    color: #ffffff;
+    margin-top: 50px; /* White color */
+    margin-bottom: 50px; /* Space below the title */
+}
+
+/* Grid Layout */
+.product-grid {
+    display: grid;
+    grid-column: 1 / -1; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    min-height: 300px; /* Ensures the grid has a minimum height */
+    place-items: center; /* Centers items vertically and horizontally */
+    text-align: center;
+}
+
+/* Product Card Styling */
+.product-card {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    max-height: 250px; /* Larger image size */
+    object-fit: contain;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 20px;
+}
+
+/* Product Name */
+.product-card h3 {
+    font-size: 1.3em;
+    color: #333; /* Dark text for the name */
+    margin: 0;
+    font-weight: bold; /* Bolded for emphasis */
+    text-transform: capitalize;
+}
+
+/* Product Price */
+.product-card p.price {
+    font-size: 1.4em; /* Slightly larger for price */
+    color: #007bff; /* Blue color for price */
+    margin-top: 10px;
+}
+
+/* Short Info/Description */
+.product-card p.description {
+    font-size: 1em;
+    color: #555; /* Medium gray for the description */
+    margin-top: 15px;
+    line-height: 1.4; /* Make the text more readable */
+}
+
+/* View Details Link */
+.product-card .view-details {
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #0e5259; /* Blue background for the button */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the View Details link */
+.product-card .view-details:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 600px;
+}
+
+.close-btn {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Responsive Layout for Small Screens */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

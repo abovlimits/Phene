@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Admin Dashboard</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <main>
+        <h2>Add New Product</h2>
+        <form id="add-product-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" required>
+
+            <label for="product-price">Price:</label>
+            <input type="text" id="product-price" required>
+
+            <label for="product-image">Product Image:</label>
+            <input type="file" id="product-image" required accept="image/*">
+
+            <!-- Specifications -->
+            <label for="warranty">Warranty:</label>
+            <input type="text" id="warranty">
+
+            <label for="model">Model #:</label>
+            <input type="text" id="model">
+
+            <label for="cpu">CPU:</label>
+            <input type="text" id="cpu">
+
+            <label for="gpu">GPU:</label>
+            <input type="text" id="gpu">
+
+            <label for="ram">RAM:</label>
+            <input type="text" id="ram">
+
+            <label for="storage">Storage:</label>
+            <input type="text" id="storage">
+
+            <label for="color">Color:</label>
+            <input type="text" id="color">
+
+
+
+            <h3>Add Available Upgrades</h3>
+            <div id="upgrades-container">
+                <div class="upgrade">
+                    <label for="upgrade-name">Upgrade Name:</label>
+                    <input type="text" class="upgrade-name" placeholder="e.g., Extra RAM" required>
+        
+                    <label for="upgrade-price">Upgrade Price:</label>
+                    <input type="number" class="upgrade-cost" placeholder="e.g., 100" required>
+                </div>
+            </div>
+            <button type="button" onclick="addUpgradeField()">Add Another Upgrade</button>
+
+
+            <button type="submit">Add Product</button>
+        </form>
+
+        <h2>Products List (Admin Panel)</h2>
+        <div id="product-list"></div>
+    </main>
+
+    <!-- Modal for Product Specifications -->
+    <div id="specs-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2>Product Specifications</h2>
+            <div id="product-specs"></div> <!-- Here, the specs will be displayed -->
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
